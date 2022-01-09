@@ -1,7 +1,9 @@
 let startBtn=document.querySelector(".start");
 let restartBtn=document.querySelector(".restart");
 let box=document.querySelector(".box");
-let scoreEl=document.querySelector("span");
+let scoreEl=document.querySelector(".score span");
+let highScoreEl=document.querySelector(".highScore span");
+let highScore=document.querySelector(".highScore");
 let power=document.querySelector(".meter span");
 let powerLevel=document.querySelector(".meter");
 let full_power=100;
@@ -10,6 +12,7 @@ let tool=canvas.getContext("2d");
 canvas.height=window.innerHeight;
 canvas.width=window.innerWidth;
 let score=0;
+//let highscore=100;
 let spaceImg = new Image();
 spaceImg.src="space.png";
 let planetImg = new Image();
@@ -21,7 +24,7 @@ let eWidth=60;
 let eposX=canvas.width/2-30;
 let eposY=canvas.height/2-30;
 
-
+//highScoreEl.innerText=highscore;
 let coronas=[];
 let bullets=[];
 let particles=[];
@@ -140,6 +143,7 @@ function animate(){
             power.style.width=`${full_power}%`;
             coronas.splice(i,1);
             if(full_power==0) {
+                //highscore=Math.max(highscore, score); // have to impl
                 cancelAnimationFrame(animateId);
                 reStart();
             }
@@ -158,6 +162,7 @@ function animate(){
                     bullets.splice(bulletIdx,1);
                     score +=10;
                     scoreEl.innerText=score;
+                    //highscore=Math.max(highscore, score); // have to impl
                 }, 0)
             }
         })
@@ -198,6 +203,8 @@ function startGame(){
         e.stopImmediatePropagation();
         box.style.display="none";
         powerLevel.style.display="flex";
+        //highScore.style.display="flex";
+        //localStorage.setItem("highScoreKey", highScore);//have to impliment
         tool.fillRect(0,0,canvas.clientWidth,canvas.height);
         tool.drawImage(spaceImg,0,0,canvas.width,canvas.height);
     

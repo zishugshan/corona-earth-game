@@ -27,10 +27,18 @@
     
 }
 .score {
-    color: white;
+   color: white;
+   position: fixed;
+   left: 2vw;
+   top: 4vh;
+}
+
+.highScore {
+    color: #00a8ff;
     position: fixed;
-    left: 2vw;
+    left: 3vw;
     top: 4vh;
+   
 }
 
 .container{
