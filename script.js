@@ -191,7 +191,7 @@ function createCorona(){
             x:Math.cos(angle)*3,
             y:Math.sin(angle)*3
         };
-        let corona=new Corona(x,y,40,40,velocity);
+        let corona=new Corona(x,y,35,35,velocity);
         coronas.push(corona);
     },1000);
 }
