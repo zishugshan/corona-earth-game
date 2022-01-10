@@ -193,7 +193,7 @@ function createCorona(){
         };
         let corona=new Corona(x,y,35,35,velocity);
         coronas.push(corona);
-    },1000);
+    },750);
 }
 
 startGame();
