@@ -4,6 +4,10 @@
     font-family: sans-serif;
 }
 
+body {
+    overflow : hidden;
+} 
+
 .box {
     position: fixed;
     left: 35vw;
@@ -15,6 +19,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    overflow : hidden;
 }
 .btn {
     padding: 1rem;
