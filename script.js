@@ -188,8 +188,8 @@ function createCorona(){
         
         let angle=Math.atan2(canvas.height/2-y,canvas.width/2-x);
         let velocity={
-            x:Math.cos(angle)*3,
-            y:Math.sin(angle)*3
+            x:Math.cos(angle)*2,
+            y:Math.sin(angle)*2
         };
         let corona=new Corona(x,y,35,35,velocity);
         coronas.push(corona);
